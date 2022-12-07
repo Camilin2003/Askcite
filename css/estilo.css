@@ -168,7 +168,7 @@ footer{
         left: 10%;
         top: 50%;
         max-height: 50px;
-        font-size: 3em;
+        font-size: 2em;
         transform: translate(0px,-130px);
     
         color: white;
@@ -220,11 +220,11 @@ footer{
     }
     header .pregunta{
         position: absolute;
-        width: 100%;
+       
         left: 10%;
         top: 50%;
         max-height: 50px;
-        font-size: 4em;
+        font-size: 3em;
         transform: translate(0px,-130px);
     
         color: white;
@@ -235,12 +235,12 @@ footer{
     }
     header .pregunta2{
         position: absolute;
-        width: 100%;
+        
         
     
         left: 15%;
         top: 95%;
-        font-size: 2.5em;
+        font-size: 2em;
         transform: translate(0px,-130px);
         color: white;
     }

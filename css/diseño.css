@@ -15,15 +15,18 @@ header .pregunta{
     color: white;
 }
 
-header .marco{
+header .marco3{
     position: absolute;
-    width: 40%;
+    width: 10%;
     right:  10%;
-    top: 50%;
+    top: 40%;
     transform: translate(0px,-250px);
     width: 450px;
 
 
+}
+header .marco3 img{
+    width: 80%;
 }
 .carrito{
     width: 80px;
@@ -53,15 +56,15 @@ header .pregunta p{
 #cdiseñamos{
     display: flex;
     align-items: center;
-    min-height: 70vh;
+    min-height: 50vh;
 }
 
 #cdiseñamos .marco1{
-    width: 50%;
+    
 }
 #cdiseñamos .marco1 img{
-   
-   height: 70%;
+   transform: translate(-0px , 150px);
+   width: 100%;
     
 }
 #cdiseñamos .texto1{
@@ -84,3 +87,143 @@ header .pregunta p{
     border-radius: 20px;
     
 }
+
+
+
+
+/* MEDIA QUERI */
+/* a */
+
+@media (min-width: 1px) {
+
+}
+
+/* SM */
+@media (max-width: 576px) {
+    .carrito{
+        width: 80px;
+        background-color: #3A0A5B;
+        position: fixed;
+        left: 50%;
+    }
+}
+
+
+/* MD */
+@media (max-width: 786px) {
+    .carrito{
+        width: 80px;
+        background-color: #3A0A5B;
+        position: fixed;
+        left: 40%;
+    }
+}
+
+
+
+/* LG */
+@media (max-width: 992px) {
+    #cdiseñamos .marco1{
+        width: 300px;
+        display: none;
+    }
+    .carrito{
+        width: 80px;
+        background-color: #3A0A5B;
+        position: fixed;
+        left: 30%;
+    }
+    #cdiseñamos .marco1 img{
+       transform: translate(-0px , 100px);
+       display: none;
+        
+    }
+}
+@media (min-width: 992px) {
+    .pollo1{
+        font-size: 1.5em;
+     }
+     
+}
+
+
+@media (min-width: 1300px){
+    #cdiseñamos .marco1{
+        width: 600px;
+    }
+    #cdiseñamos .marco1 img{
+       
+       
+        
+    }
+    
+}
+/* XL */
+@media (max-width: 1200px) 
+
+{
+    header{
+    background-image: url(../imagenes/fondo_diseño.png);
+    background-size: cover;
+}
+
+header .pregunta{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    max-height: 50px;
+    font-size: 4em;
+    transform: translate(0px,-130px);
+    
+    color: white;
+}
+
+
+#cdiseñamos .marco1{
+    
+}
+#cdiseñamos .marco1 img{
+   
+   width: 100%;
+    
+}
+
+
+
+
+
+header .marco3{
+    position: absolute;
+    width: 10%;
+    right:  10%;
+    top: 50%;
+    transform: translate(0px,-250px);
+    width: 450px;
+
+
+}
+
+
+
+
+
+
+.marco3 img{
+    display: none;
+ }
+
+ .pollo1{
+    font-size: 1.2em;
+ }
+ .pollo2{
+    font-size: 1.5em;
+ }
+.carrito{
+    width: 80px;
+    background-color: #3A0A5B;
+}}
+
+
+
+/* XXL */
+@media (min-width: 1400px) {}

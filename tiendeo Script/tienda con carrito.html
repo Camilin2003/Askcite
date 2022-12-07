@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    
+<h2>PRODUCTOS</h2>
+    <button onclick="add('camiseta estampada negra')">camiseta</button>
+    <button onclick="add('Pantalon camuflado')">Pantalon</button>
+    <button onclick="add('gorro en lana con orejas')">gorro</button>
+    <button onclick="add('gafas rayvan')">gafas</button>
+
+<!-- carrito -->
+
+    <button class="btn btn-primary position-fixed top-0 end-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+        CARRITO
+       </button>
+       
+       <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+         <div class="offcanvas-header">
+           <h5 class="offcanvas-title" id="staticBackdropLabel">Mi Carrito</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body">
+
+            
+          <h2>Lista de Repuestos</h2>
+           <div id="lista_de_carrito" class="w-100 px-2 my-3">
+             
+         </div>
+         <div>
+             <button class="btn btn-primary" type="button" onclick="openwin()">
+                 HACER PEDIDO
+                </button>
+         </div>
+       </div>
+     
+
+<!-- fin carrito -->
+
+
+
+</body>
+</html>
+
+
+<!-- SCRIPT BOOTSTRAP -->
+<script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.js"></script>
+
+
+
+<!--MI SCRIPT -->
+<script>
+    
+     
+     let item = "";
+
+    let listado_array = [];
+    function add(x){
+            
+            item = " • " + x + " ";
+            
+
+            listado_array.push(item);
+            // vaciar la lista
+            document.getElementById("lista_de_carrito").innerHTML = "";
+    
+
+             for(var i = 0; i < listado_array.length;i++ ){
+               
+                 document.getElementById("lista_de_carrito").innerHTML += listado_array[i];
+                 document.getElementById("lista_de_carrito").innerHTML += "<br>";
+             }
+            //MSM AGREGADO
+            alert("Producto " + x + " agregado al carrito exitosamente");
+           
+        }
+
+         //MSM ENCABEZADO Y NUMERO DE WASA
+    let wame = "https://wa.me/573004176447?text=Estoy interesado en los siguientes productos: ";
+
+    function openwin(){
+        let mensaje =  document.getElementById("lista_de_carrito").textContent;
+        wame+= mensaje;
+        alert(wame);
+         //window.open(wame);
+    }
+
+
+</script>

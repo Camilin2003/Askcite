@@ -1,0 +1,86 @@
+/* header */
+header{
+    background-image: url(../imagenes/fondo_diseño.png);
+    background-size: cover;
+}
+
+header .pregunta{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    max-height: 50px;
+    font-size: 4em;
+    transform: translate(0px,-130px);
+    
+    color: white;
+}
+
+header .marco{
+    position: absolute;
+    width: 40%;
+    right:  10%;
+    top: 50%;
+    transform: translate(0px,-250px);
+    width: 450px;
+
+
+}
+.carrito{
+    width: 80px;
+    background-color: #3A0A5B;
+}
+.carrito img{
+    width: 100%;
+}
+header .pregunta p{
+    height: 100%;
+    
+}
+/* servicios */
+#servicios{}
+#servicios .titulose{
+    width: 100%;
+}
+.btnservi{
+    width:200px ;
+}
+#servicios .titulose h2{
+    width: 100%;
+}
+
+
+/* comodiseñamos */
+#cdiseñamos{
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+}
+
+#cdiseñamos .marco1{
+    width: 50%;
+}
+#cdiseñamos .marco1 img{
+   
+   height: 70%;
+    
+}
+#cdiseñamos .texto1{
+    font-size: 1.5em;
+} 
+#cdiseñamos .texto1 h3{
+    color: #3A0A5B;
+    font-size: 3em;
+}
+
+
+.fondo{
+    
+    background-color: white;
+    
+}
+
+.fondo .tablero{
+    margin: 5%;
+    border-radius: 20px;
+    
+}

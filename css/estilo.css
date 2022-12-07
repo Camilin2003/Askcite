@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+    /* font-family: 'Rubik Marker Hatch', cursive; */
+/* Header */
+header{
+    background-image: url(../imagenes/fondo_header.png);
+    min-height: 100vh;
+    background-size: cover;
+}
+
+header .navegacion{
+    height: 10vh;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8855917366946778) 36%, rgba(0,0,0,0.7707457983193278) 62%, rgba(0,0,0,0) 100%);
+}
+header .navegacion {
+    
+}
+header .pregunta{
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    top: 50%;
+    max-height: 50px;
+    font-size: 4em;
+    transform: translate(0px,-130px);
+
+    color: white;
+}
+header .pregunta p{
+    height: 100%;
+    display: block;
+}
+header .pregunta2{
+    position: absolute;
+    width: 40%;
+    
+
+    left: 15%;
+    top: 95%;
+    font-size: 2.5em;
+    transform: translate(0px,-130px);
+    color: white;
+}
+header .marco{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translate(0px,-250px);
+    width: 450px;
+    
+}
+
+header .marco:hover img{
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+header .marco img{
+    width: 100%;
+}
+.coso{
+    width: 60%;
+  
+   
+}
+
+/* Loquehacemos */
+
+#loquehacemos{
+
+}
+#loquehacemos h2{
+    text-align: center;
+
+}
+
+/* Soluciones */
+#soluciones{
+    background-image: url(../imagenes/fondosoluciones.png);
+    background-size: cover;
+    display: flex;
+    
+}
+#soluciones h2{
+    
+}
+
+/* Agendamiento */
+
+.agenda{
+    height: 100vh;
+}
+.agenda iframe{
+    height: 100%;
+}
+
+/* Contacto */
+#contacto{}
+
+
+/* Foooter */
+footer{
+    background-color: #464142;
+    min-height: 10vh;
+}
+
+
+
+/* Colores */
+.morado{
+    color: #3A0A5B;
+    
+}
+.gris{
+    color: #A8A8A8;
+}
+.grisd{
+    color: #393536;
+}
+.rosa{
+    color: #8049A6;
+}
+.azul{
+    color: #1D3587;
+}
+
+/* jijijij */
+@media (max-width: 720px) { 
+    .coso{
+        display: none;
+      
+       
+    }
+ }
+
+/* MEDIA QUERI */
+/* a */
+@media (min-width: 1px) {
+    header{
+        background-image: url(../imagenes/fondo_header.png);
+        min-height: 100vh;
+        background-size: cover;
+    }
+    
+    header .navegacion{
+        position: fixed;
+        width: 100%;
+        z-index: 99999;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8855917366946778) 36%, rgba(0,0,0,0.7707457983193278) 62%, rgba(0,0,0,0) 100%);
+    }
+    header .navegacion {
+        
+    }
+    header .pregunta{
+        position: absolute;
+        width: 90%;
+        left: 10%;
+        top: 50%;
+        max-height: 50px;
+        font-size: 3em;
+        transform: translate(0px,-130px);
+    
+        color: white;
+    }
+    header .pregunta p{
+        height: 100%;
+        display: block;
+    }
+    header .pregunta2{
+        position: absolute;
+        width: 80%;
+        
+    
+        left: 15%;
+        top: 95%;
+        font-size: 1.5em;
+        transform: translate(0px,-130px);
+        color: white;
+    }
+    header .marco{
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translate(0px,-250px);
+        width: 450px;
+        display: none;
+    }
+    header .marco img{
+        width: 100%;
+    }
+}
+/* SM */
+@media (min-width: 576px) {
+    header{
+        background-image: url(../imagenes/fondo_header.png);
+        min-height: 100vh;
+        background-size: cover;
+    }
+    
+    header .navegacion{
+        position: fixed;
+        width: 100%;
+        z-index: 99999;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8855917366946778) 36%, rgba(0,0,0,0.7707457983193278) 62%, rgba(0,0,0,0) 100%);
+    }
+    header .navegacion {
+        
+    }
+    header .pregunta{
+        position: absolute;
+        width: 100%;
+        left: 10%;
+        top: 50%;
+        max-height: 50px;
+        font-size: 4em;
+        transform: translate(0px,-130px);
+    
+        color: white;
+    }
+    header .pregunta p{
+        height: 100%;
+        display: block;
+    }
+    header .pregunta2{
+        position: absolute;
+        width: 100%;
+        
+    
+        left: 15%;
+        top: 95%;
+        font-size: 2.5em;
+        transform: translate(0px,-130px);
+        color: white;
+    }
+    header .marco{
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translate(0px,-250px);
+        width: 450px;
+        display: none;
+    }
+    header .marco img{
+        width: 100%;
+    }
+}
+/* MD */
+@media (min-width: 786px) {
+    header{
+        background-image: url(../imagenes/fondo_header.png);
+        min-height: 100vh;
+        background-size: cover;
+    }
+    
+    header .navegacion{
+        position: fixed;
+        width: 100%;
+        z-index: 99999;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8855917366946778) 36%, rgba(0,0,0,0.7707457983193278) 62%, rgba(0,0,0,0) 100%);
+    }
+    header .navegacion {
+        
+    }
+    header .pregunta{
+        position: absolute;
+        width: 80%;
+        left: 10%;
+        top: 50%;
+        max-height: 50px;
+        font-size: 4em;
+        transform: translate(0px,-130px);
+    
+        color: white;
+    }
+    header .pregunta p{
+        height: 100%;
+        display: block;
+    }
+    header .pregunta2{
+        position: absolute;
+        width: 80%;
+        
+    
+        left: 15%;
+        top: 95%;
+        font-size: 2.5em;
+        transform: translate(0px,-130px);
+        color: white;
+    }
+    header .marco{
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translate(0px,-250px);
+        width: 450px;
+        display: none;
+    }
+    header .marco img{
+        width: 100%;
+    }
+}
+/* LG */
+@media (min-width: 992px) {
+    header{
+        background-image: url(../imagenes/fondo_header.png);
+        min-height: 100vh;
+        background-size: cover;
+    }
+    
+    header .navegacion{
+        position: fixed;
+        width: 100%;
+        z-index: 99999;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8855917366946778) 36%, rgba(0,0,0,0.7707457983193278) 62%, rgba(0,0,0,0) 100%);
+    }
+    header .navegacion {
+        
+    }
+    header .pregunta{
+        position: absolute;
+        width: 53%;
+        left: 10%;
+        top: 50%;
+        max-height: 50px;
+        font-size: 4em;
+        transform: translate(0px,-130px);
+    
+        color: white;
+    }
+    header .pregunta p{
+        height: 100%;
+        display: block;
+    }
+    header .pregunta2{
+        position: absolute;
+        width: 60%;
+        
+    
+        left: 15%;
+        top: 95%;
+        font-size: 2.5em;
+        transform: translate(0px,-130px);
+        color: white;
+    }
+    header .marco{
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translate(0px,-250px);
+        width: 300px;
+        display: block;
+    }
+    header .marco img{
+        width: 100%;
+    }
+}
+/* XL */
+@media (min-width: 1200px) { 
+    .logo{
+        width:200px ;
+    }
+    .logo img{
+        width: 100%;
+    }
+    .coso{
+        width: 65%;
+        background-color: aqua;
+      
+       
+    }
+
+    header{
+        background-image: url(../imagenes/fondo_header.png);
+        min-height: 100vh;
+        background-size: cover;
+    }
+    
+    header .navegacion{
+        position: fixed;
+        width: 100%;
+        z-index: 99999;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8855917366946778) 36%, rgba(0,0,0,0.7707457983193278) 62%, rgba(0,0,0,0) 100%);
+    }
+    header .navegacion {
+        
+    }
+    header .pregunta{
+        position: absolute;
+        width: 50%;
+        left: 10%;
+        top: 50%;
+        max-height: 50px;
+        font-size: 3.5em;
+        transform: translate(0px,-130px);
+    
+        color: white;
+    }
+    header .pregunta p{
+        height: 100%;
+        display: block;
+    }
+    header .pregunta2{
+        position: absolute;
+        width: 50%;
+        
+    
+        left: 15%;
+        top: 95%;
+        font-size: 2em;
+        transform: translate(0px,-130px);
+        color: white;
+    }
+    header .marco{
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translate(0px,-250px);
+        width: 350px;
+    }
+    header .marco img{
+        width: 100%;
+    }
+ }
+ /* XXL */
+ @media (min-width: 1400px) {}

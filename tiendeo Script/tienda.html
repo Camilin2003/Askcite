@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <button onclick="openwin()">open</button>
+
+
+    <button onclick="add('a')">a</button>
+    <button onclick="add('b')">b</button>
+    <button onclick="add('c')">c</button>
+    <button onclick="add('d')">d</button>
+
+
+
+
+</body>
+</html>
+<!-- SCRIPT BOOTSTRAP -->
+<script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.js"></script>
+
+
+
+<!--MI SCRIPT -->
+<script>
+    
+    var wame = "https://wa.me/573004176447?text=Estoy interesado en los siguientes productos: ";
+    var listado = "";
+
+    function add(x){
+        listado += " • "; // bullet guion
+        listado += x;
+        listado += " %0A "; // salto de linea 
+        
+        alert("Producto " + x + " agregado al carrito exitosamente");
+
+    }
+
+    
+    function openwin(){
+        wame+= listado;
+        alert(wame);
+         window.open(wame);
+    }
+
+
+</script>

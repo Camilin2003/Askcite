@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+
+<!-- ------------------------------ GS500------------------------------  -->
+   <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gs500_modal">
+    GS500
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="gs500_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">GS500</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://www.soymotero.net/sites/default/files/styles/max_width_800px/public/2008-09/suzuki-gs500.jpg" class="w-100">
+
+          <form id="gs500">
+                <input type="hidden" value="Suzuki GS500" name="moto" class="w-100">
+
+                <label>Modelo: </label>
+                <select name="modelo" id="" class="w-100">
+                    <option value="00"> --</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                  
+                </select>
+                <label>Repuestos: </label>
+                <textarea name="repuesto" class="w-100"></textarea>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="add('gs500')" >Agregar</button>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <!-- ------------------------------ vstrom ------------------------------  -->
+   <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vstrom_modal">
+    V-STROM
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="vstrom_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">V-STROM</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://suzuki.com.co/sites/default/files/2021-09/DL650%20AMARILLA.png" class="w-100">
+
+          <form id="vstrom">
+                <input type="hidden" value="Suzuki V-STROM" name="moto" class="w-100">
+
+                <label>Modelo: </label>
+                <select name="modelo" id="" class="w-100">
+                    <option value="00"> --</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                  
+                </select>
+                <label>Repuestos: </label>
+                <textarea name="repuesto" class="w-100"></textarea>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="add('vstrom')" >Agregar</button>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+  <!-- carrito -->
+
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+   CARRITO
+  </button>
+  
+  <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="staticBackdropLabel">Mi Carrito</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+     <h2>Lista de Repuestos</h2>
+      <div id="lista_de_carrito" class="w-100 px-2">
+        
+    </div>
+    <div>
+        <button class="btn btn-primary" type="button" onclick="openwin()">
+            HACER PEDIDO
+           </button>
+    </div>
+  </div>
+
+</body>
+
+<script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.js"></script>
+
+<!--MI SCRIPT -->
+<script>
+    
+     
+   
+
+   let listado_array = [];
+   function add(id){
+           
+    let moto = document.forms[id]["moto"].value;
+    let modelo = document.forms[id]["modelo"].value;
+    let repuesto = document.forms[id]["repuesto"].value;
+
+    let item = " • Moto: " + moto + " <br> Modelo: " + modelo + "<br> Repuestos: " + repuesto + ".<br> <hr>";
+
+
+           listado_array.push(item);
+           // vaciar la lista
+           document.getElementById("lista_de_carrito").innerHTML = "";
+   
+
+            for(var i = 0; i < listado_array.length;i++ ){
+              
+                document.getElementById("lista_de_carrito").innerHTML += listado_array[i];
+                
+            }
+           
+           alert("Repuesto de  " + moto + " agregado al carrito exitosamente");
+          
+       }
+
+
+   let wame = "https://wa.me/573004176447?text=Estoy interesado en los siguientes productos:%0A ";
+   function openwin(){
+       let mensaje =  document.getElementById("lista_de_carrito").textContent;
+       wame+= mensaje;
+       alert(wame);
+        window.open(wame);
+   }
+
+
+</script>
+
+</html>
